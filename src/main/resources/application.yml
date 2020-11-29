@@ -1,0 +1,26 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: helloworld
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+        instance:
+          prefer-ip: true
+        register-once: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+info:
+  author: liqiao
+  email: 243368584@qq.com
+logging:
+  level:
+    root: ERROR
